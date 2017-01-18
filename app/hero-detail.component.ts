@@ -8,7 +8,8 @@ import 'rxjs/add/operator/switchMap';
 @Component({
     moduleId: module.id,
     selector: 'my-hero-detail',
-    templateUrl: 'hero-detail.component.html',
+    templateUrl: 'html/hero-detail.component.html',
+    styleUrls: [ 'css/hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
     ngOnInit():void {
@@ -21,8 +22,7 @@ export class HeroDetailComponent implements OnInit {
                 private route:ActivatedRoute,
                 private location:Location) {
     }
-
-    @Input()
+    
     hero:Hero;
 
     goBack():void {
