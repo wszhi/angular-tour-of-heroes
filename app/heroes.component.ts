@@ -85,7 +85,7 @@ export class HeroesComponent implements OnInit{
     heroes:Hero[];
 
     getHeroes():void {
-        this.heroes = this.heroService.getHeroes();
+        this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
     }
 
 }
