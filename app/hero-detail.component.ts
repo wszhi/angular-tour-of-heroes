@@ -22,10 +22,15 @@ export class HeroDetailComponent implements OnInit {
                 private route:ActivatedRoute,
                 private location:Location) {
     }
-    
+
     hero:Hero;
 
     goBack():void {
         this.location.back();
+    }
+
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack());
     }
 }
